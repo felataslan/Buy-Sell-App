@@ -50,7 +50,9 @@ namespace Exchange_App
             this.lblBakiye = new System.Windows.Forms.Label();
             this.lblKullaniciAdi = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.userControlAlimSatim1 = new Exchange_App.UserControlAlimSatim();
             this.userControlVarlikEkle1 = new Exchange_App.UserControlVarlikEkle();
+            this.userControlRapor1 = new Exchange_App.UserControlRapor();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -302,6 +304,13 @@ namespace Exchange_App
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanıcı Adı:";
             // 
+            // userControlAlimSatim1
+            // 
+            this.userControlAlimSatim1.Location = new System.Drawing.Point(254, 143);
+            this.userControlAlimSatim1.Name = "userControlAlimSatim1";
+            this.userControlAlimSatim1.Size = new System.Drawing.Size(872, 535);
+            this.userControlAlimSatim1.TabIndex = 4;
+            // 
             // userControlVarlikEkle1
             // 
             this.userControlVarlikEkle1.Location = new System.Drawing.Point(254, 143);
@@ -309,11 +318,20 @@ namespace Exchange_App
             this.userControlVarlikEkle1.Size = new System.Drawing.Size(872, 535);
             this.userControlVarlikEkle1.TabIndex = 3;
             // 
+            // userControlRapor1
+            // 
+            this.userControlRapor1.Location = new System.Drawing.Point(254, 143);
+            this.userControlRapor1.Name = "userControlRapor1";
+            this.userControlRapor1.Size = new System.Drawing.Size(872, 535);
+            this.userControlRapor1.TabIndex = 5;
+            // 
             // FrmTrade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1126, 678);
+            this.Controls.Add(this.userControlRapor1);
+            this.Controls.Add(this.userControlAlimSatim1);
             this.Controls.Add(this.userControlVarlikEkle1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -354,5 +372,7 @@ namespace Exchange_App
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel sidePanel;
         private UserControlVarlikEkle userControlVarlikEkle1;
+        private UserControlAlimSatim userControlAlimSatim1;
+        private UserControlRapor userControlRapor1;
     }
 }

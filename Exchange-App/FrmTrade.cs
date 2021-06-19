@@ -36,13 +36,20 @@ namespace Exchange_App
         {
             sidePanel.Height = btnTrade.Height;
             sidePanel.Top = btnTrade.Top;
+            userControlAlimSatim1.BringToFront();
         }
 
         private void btnRapor_Click(object sender, EventArgs e)
         {
             sidePanel.Height = btnRapor.Height;
             sidePanel.Top = btnRapor.Top;
+            userControlRapor1.BringToFront();
+        }
 
+        // labellardaki kullanıcı bilgisinin güncellenmesi
+        public void labelGuncelle()
+        {
+            //düzenlenecek
         }
     }
 }

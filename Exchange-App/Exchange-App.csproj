@@ -72,6 +72,18 @@
     <Compile Include="FrmSignUp.Designer.cs">
       <DependentUpon>FrmSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlAlimSatim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAlimSatim.Designer.cs">
+      <DependentUpon>UserControlAlimSatim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlRapor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlRapor.Designer.cs">
+      <DependentUpon>UserControlRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlVarlikEkle.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,6 +108,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlAlimSatim.resx">
+      <DependentUpon>UserControlAlimSatim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlRapor.resx">
+      <DependentUpon>UserControlRapor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlVarlikEkle.resx">
       <DependentUpon>UserControlVarlikEkle.cs</DependentUpon>
     </EmbeddedResource>
