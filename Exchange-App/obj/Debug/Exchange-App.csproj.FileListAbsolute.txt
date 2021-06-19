@@ -13,3 +13,4 @@ C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange_App.UserCont
 C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange_App.UserControlAlimSatim.resources
 C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange-App.csprojAssemblyReference.cache
 C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange_App.UserControlRapor.resources
+C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange_App.FrmSignUp.resources

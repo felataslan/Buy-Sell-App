@@ -40,12 +40,13 @@ namespace Exchange_App
                 //Admin formu
                 if (admin)
                 {
-                    /*FrmAdmin frmAdmin = new FrmAdmin();
+                    FrmAdmin frmAdmin = new FrmAdmin();
                     frmAdmin.Show();
-                    this.Close();*/
-                    FrmTrade trade = new FrmTrade();
-                    trade.Show();
                     this.Hide();
+                    /*FrmTrade trade = new FrmTrade();
+                    trade.Show();
+                    this.Hide();*/
+
                 }
                 //Trade formu
                 else

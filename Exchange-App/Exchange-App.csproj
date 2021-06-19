@@ -90,11 +90,19 @@
     <Compile Include="UserControlVarlikEkle.Designer.cs">
       <DependentUpon>UserControlVarlikEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="yazilimYapimiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>yazilimYapimiDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSignUp.resx">
+      <DependentUpon>FrmSignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTrade.resx">
       <DependentUpon>FrmTrade.cs</DependentUpon>
@@ -126,6 +134,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="yazilimYapimiDataSet.xsc">
+      <DependentUpon>yazilimYapimiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="yazilimYapimiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>yazilimYapimiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="yazilimYapimiDataSet.xss">
+      <DependentUpon>yazilimYapimiDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
