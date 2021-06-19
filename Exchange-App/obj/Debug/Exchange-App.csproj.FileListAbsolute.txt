@@ -1,0 +1,12 @@
+C:\Users\ferha\Desktop\Exchange-App\Exchange-App\bin\Debug\Exchange-App.exe.config
+C:\Users\ferha\Desktop\Exchange-App\Exchange-App\bin\Debug\Exchange-App.exe
+C:\Users\ferha\Desktop\Exchange-App\Exchange-App\bin\Debug\Exchange-App.pdb
+C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange_App.Properties.Resources.resources
+C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange-App.csproj.GenerateResource.cache
+C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange-App.csproj.CoreCompileInputs.cache
+C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange-App.exe
+C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange-App.pdb
+C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange_App.FrmLogin.resources
+C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange_App.FrmAdmin.resources
+C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange_App.FrmTrade.resources
+C:\Users\ferha\Desktop\Exchange-App\Exchange-App\obj\Debug\Exchange_App.UserControlVarlikEkle.resources

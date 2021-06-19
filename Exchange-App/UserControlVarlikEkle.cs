@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Exchange_App
 {
-    public partial class Login : Form
+    public partial class UserControlVarlikEkle : UserControl
     {
-        public Login()
+        public UserControlVarlikEkle()
         {
             InitializeComponent();
         }
