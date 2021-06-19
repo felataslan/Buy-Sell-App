@@ -39,6 +39,7 @@ namespace Exchange_App
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblSignUp = new System.Windows.Forms.Label();
+            this.ckbAdmin = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnClose
@@ -92,7 +93,7 @@ namespace Exchange_App
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLogin.Location = new System.Drawing.Point(103, 285);
+            this.btnLogin.Location = new System.Drawing.Point(103, 302);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(189, 39);
@@ -147,18 +148,30 @@ namespace Exchange_App
             // lblSignUp
             // 
             this.lblSignUp.AutoSize = true;
-            this.lblSignUp.Location = new System.Drawing.Point(81, 348);
+            this.lblSignUp.Location = new System.Drawing.Point(81, 365);
             this.lblSignUp.Name = "lblSignUp";
             this.lblSignUp.Size = new System.Drawing.Size(240, 20);
             this.lblSignUp.TabIndex = 25;
             this.lblSignUp.Text = "Hesabın yok mu? Hemen üye ol.";
             this.lblSignUp.Click += new System.EventHandler(this.lblSignUp_Click);
             // 
+            // ckbAdmin
+            // 
+            this.ckbAdmin.AutoSize = true;
+            this.ckbAdmin.Font = new System.Drawing.Font("Century Gothic", 8.059701F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ckbAdmin.Location = new System.Drawing.Point(104, 271);
+            this.ckbAdmin.Name = "ckbAdmin";
+            this.ckbAdmin.Size = new System.Drawing.Size(78, 22);
+            this.ckbAdmin.TabIndex = 26;
+            this.ckbAdmin.Text = "Admin";
+            this.ckbAdmin.UseVisualStyleBackColor = true;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 476);
+            this.Controls.Add(this.ckbAdmin);
             this.Controls.Add(this.lblSignUp);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -192,6 +205,7 @@ namespace Exchange_App
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblSignUp;
+        private System.Windows.Forms.CheckBox ckbAdmin;
     }
 }
 
