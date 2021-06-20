@@ -15,7 +15,7 @@ namespace Exchange_App
     {
         bool admin;
         bool kontrol;
-        public static string id, kullaniciAdi,Bakiye,Arpa,Bugday,Pamuk;
+        public static string id,kullaniciAdi;
 
         public FrmLogin()
         {
@@ -97,7 +97,7 @@ namespace Exchange_App
                     admin = false;
                     kontrol = true;
                     baglanti.Close();
-                    kullaniciBilgiBul();
+                    idBul();
                 }
                 else
                 {
@@ -108,14 +108,6 @@ namespace Exchange_App
             baglanti.Close();
         }
 
-        public void kullaniciBilgiBul()
-        {
-            idBul();
-            arpaBul();
-            bugdayBul();
-            pamukBul();
-            bakiyeBul();
-        }
         private void idBul()
         {
             baglanti.Open();
@@ -126,69 +118,7 @@ namespace Exchange_App
             kullaniciAdi = txtKullaniciAdi.Text;
         }
 
-        private void arpaBul()
-        {
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("select KO.ogeMiktar from Kullanicilar K inner join  KullaniciOgeleri Ko on K.kullaniciID=Ko.kullaniciID where K.kullaniciAdi=@p1 and Ko.ogeID=1", baglanti);
-            komut.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
-            if(komut.ExecuteScalar()== null)
-            {
-                Arpa = "0";
-            }
-            else
-            {
-                Arpa = komut.ExecuteScalar().ToString();
-            }
-            baglanti.Close();
-
-        }
-        private void bugdayBul()
-        {
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("select KO.ogeMiktar from Kullanicilar K inner join  KullaniciOgeleri Ko on K.kullaniciID=Ko.kullaniciID where K.kullaniciAdi=@p1 and Ko.ogeID=2", baglanti);
-            komut.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
-            if (komut.ExecuteScalar() == null)
-            {
-                Bugday = "0";
-            }
-            else
-            {
-                Bugday = komut.ExecuteScalar().ToString();
-            }
-            baglanti.Close();
-        }
-        private void pamukBul()
-        {
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("select KO.ogeMiktar from Kullanicilar K inner join  KullaniciOgeleri Ko on K.kullaniciID=Ko.kullaniciID where K.kullaniciAdi=@p1 and Ko.ogeID=3", baglanti);
-            komut.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
-            if (komut.ExecuteScalar() == null)
-            {
-                Pamuk = "0";
-            }
-            else
-            {
-                Pamuk = komut.ExecuteScalar().ToString();
-            }
-            baglanti.Close();
-        }
-        private void bakiyeBul()
-        {
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("select KO.ogeMiktar from Kullanicilar K inner join  KullaniciOgeleri Ko on K.kullaniciID=Ko.kullaniciID where K.kullaniciAdi=@p1 and Ko.ogeID=4", baglanti);
-            komut.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
-            if (komut.ExecuteScalar() == null)
-            {
-                Bakiye = "0";
-            }
-            else
-            {
-                Bakiye = komut.ExecuteScalar().ToString();
-            }
-            baglanti.Close();
-        }
-
-
+        
         /*private void datatableOlustur()
         {
             idBul();

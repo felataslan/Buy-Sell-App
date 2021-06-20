@@ -38,8 +38,10 @@ namespace Exchange_App
             this.btnTrade = new System.Windows.Forms.Button();
             this.btnVarlikEkle = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             this.lblid = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,7 +57,6 @@ namespace Exchange_App
             this.userControlAlimSatim1 = new Exchange_App.UserControlAlimSatim();
             this.userControlVarlikEkle1 = new Exchange_App.UserControlVarlikEkle();
             this.userControlRapor1 = new Exchange_App.UserControlRapor();
-            this.btnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -176,6 +177,20 @@ namespace Exchange_App
             this.panel2.Size = new System.Drawing.Size(872, 42);
             this.panel2.TabIndex = 1;
             // 
+            // btnBack
+            // 
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 13.97015F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnBack.Location = new System.Drawing.Point(805, 4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(33, 32);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "<";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // btnClose
             // 
             this.btnClose.FlatAppearance.BorderSize = 0;
@@ -192,6 +207,7 @@ namespace Exchange_App
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnGuncelle);
             this.panel3.Controls.Add(this.lblid);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
@@ -209,6 +225,21 @@ namespace Exchange_App
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(872, 101);
             this.panel3.TabIndex = 2;
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.btnGuncelle.FlatAppearance.BorderSize = 0;
+            this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuncelle.Font = new System.Drawing.Font("Century Gothic", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnGuncelle.Location = new System.Drawing.Point(552, 55);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(80, 33);
+            this.btnGuncelle.TabIndex = 3;
+            this.btnGuncelle.Text = "güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // lblid
             // 
@@ -351,20 +382,6 @@ namespace Exchange_App
             this.userControlRapor1.Size = new System.Drawing.Size(872, 535);
             this.userControlRapor1.TabIndex = 5;
             // 
-            // btnBack
-            // 
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 13.97015F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBack.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnBack.Location = new System.Drawing.Point(805, 4);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(33, 32);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "<";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // FrmTrade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -417,5 +434,6 @@ namespace Exchange_App
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnGuncelle;
     }
 }

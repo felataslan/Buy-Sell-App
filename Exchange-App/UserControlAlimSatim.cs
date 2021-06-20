@@ -27,14 +27,13 @@ namespace Exchange_App
         private void btnAl_Click(object sender, EventArgs e)
         {
             int alinacakMiktar = Convert.ToInt32(txtMiktar.Text);
-            int saticiSatir = 0;
             int satisFiyat;
             int saticiStok;
             while (alinacakMiktar != 0)
             {
-                string saticiId = dataGridView1.Rows[saticiSatir].Cells[0].Value.ToString();
-                satisFiyat = Convert.ToInt32(dataGridView1.Rows[saticiSatir].Cells[3].Value);
-                saticiStok = Convert.ToInt32(dataGridView1.Rows[saticiSatir].Cells[2].Value);
+                string saticiId = dataGridView1.Rows[0].Cells[0].Value.ToString();
+                satisFiyat = Convert.ToInt32(dataGridView1.Rows[0].Cells[3].Value);
+                saticiStok = Convert.ToInt32(dataGridView1.Rows[0].Cells[2].Value);
 
                 aliciBilgiGetir();
                 saticiBilgiGetir(saticiId);
@@ -47,10 +46,10 @@ namespace Exchange_App
                 {
                     
                     alisverisTutar += alinacakMiktar * satisFiyat;
-                    aliciBakiye = (Convert.ToInt32(aliciBakiye) - alisverisTutar).ToString();
-                    AliciUrunMiktar = (Convert.ToInt32(AliciUrunMiktar) + Convert.ToInt32(alinacakMiktar)).ToString();
+                    aliciBakiye = (Convert.ToDouble(aliciBakiye) - alisverisTutar).ToString();
+                    AliciUrunMiktar = (Convert.ToDouble(AliciUrunMiktar) + Convert.ToDouble(alinacakMiktar)).ToString();
                     saticiBakiye = (Convert.ToInt32(saticiBakiye) + alisverisTutar).ToString();
-                    saticiUrunMiktar = (Convert.ToInt32(saticiUrunMiktar) - Convert.ToInt32(alinacakMiktar)).ToString();
+                    saticiUrunMiktar = (Convert.ToDouble(saticiUrunMiktar) - Convert.ToDouble(alinacakMiktar)).ToString();
                     alinacakMiktar = 0;
                     bilgiGuncelle(FrmLogin.id,AliciUrunMiktar,aliciBakiye);
                     bilgiGuncelle(saticiId,saticiUrunMiktar,saticiBakiye);
@@ -59,19 +58,16 @@ namespace Exchange_App
                 else if( alinacakMiktar > saticiStok)
                 {
                     alisverisTutar += saticiStok * satisFiyat;
-                    aliciBakiye = (Convert.ToInt32(aliciBakiye) - alisverisTutar).ToString();
-                    AliciUrunMiktar = (Convert.ToInt32(AliciUrunMiktar) + Convert.ToInt32(saticiStok)).ToString();
-                    saticiBakiye = (Convert.ToInt32(saticiBakiye) + alisverisTutar).ToString();
+                    aliciBakiye = (Convert.ToDouble(aliciBakiye) - alisverisTutar).ToString();
+                    AliciUrunMiktar = (Convert.ToDouble(AliciUrunMiktar) + Convert.ToDouble(saticiStok)).ToString();
+                    saticiBakiye = (Convert.ToDouble(saticiBakiye) + alisverisTutar).ToString();
                     saticiUrunMiktar = "0";
                     alinacakMiktar -= saticiStok;
                     bilgiGuncelle(FrmLogin.id, AliciUrunMiktar, aliciBakiye);
                     bilgiGuncelle(saticiId, saticiUrunMiktar, saticiBakiye);
                     listele();
                 }
-
-                saticiSatir++;
             }
-
         }
 
         private void bilgiGuncelle(string id,string urunMiktar,string para)
