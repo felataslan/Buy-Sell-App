@@ -124,6 +124,7 @@ namespace Exchange_App
             this.btnVarlikEkle.TabIndex = 26;
             this.btnVarlikEkle.Text = "VARLIK EKLE";
             this.btnVarlikEkle.UseVisualStyleBackColor = false;
+            this.btnVarlikEkle.Click += new System.EventHandler(this.btnVarlikEkle_Click);
             // 
             // UserControlVarlikEkle
             // 

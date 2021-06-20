@@ -170,7 +170,7 @@ namespace Exchange_App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 476);
+            this.ClientSize = new System.Drawing.Size(390, 464);
             this.Controls.Add(this.ckbAdmin);
             this.Controls.Add(this.lblSignUp);
             this.Controls.Add(this.panel2);

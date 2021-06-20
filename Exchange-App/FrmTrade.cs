@@ -12,12 +12,20 @@ namespace Exchange_App
 {
     public partial class FrmTrade : Form
     {
+        
         public FrmTrade()
         {
             InitializeComponent();
             sidePanel.Height = btnVarlikEkle.Height;
             sidePanel.Top = btnVarlikEkle.Top;
             userControlVarlikEkle1.BringToFront();
+            lblid.Text = FrmLogin.id;
+            lblKullaniciAdi.Text = FrmLogin.kullaniciAdi;
+            lblBakiye.Text = FrmLogin.Bakiye;
+            lblPamuk.Text = FrmLogin.Pamuk;
+            lblArpa.Text = FrmLogin.Arpa;
+            lblBugday.Text = FrmLogin.Bugday;
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -50,6 +58,7 @@ namespace Exchange_App
         public void labelGuncelle()
         {
             //düzenlenecek
+            lblKullaniciAdi.Text = "deneme";
         }
     }
 }

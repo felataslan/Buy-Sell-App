@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Exchange_App
 {
+    
     public partial class UserControlVarlikEkle : UserControl
     {
+
+        
         public UserControlVarlikEkle()
         {
             InitializeComponent();
+        }
+
+        private void btnVarlikEkle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

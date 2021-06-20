@@ -15,6 +15,8 @@ namespace Exchange_App
     {
         bool admin;
         bool kontrol;
+        public static string id, kullaniciAdi,Bakiye,Arpa,Bugday,Pamuk;
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -39,6 +41,7 @@ namespace Exchange_App
         private void btnLogin_Click(object sender, EventArgs e)
         {
             girisKontrol();
+            
             if (kontrol == true)
             {
                 //Admin formu
@@ -93,6 +96,8 @@ namespace Exchange_App
                 {
                     admin = false;
                     kontrol = true;
+                    baglanti.Close();
+                    kullaniciBilgiBul();
                 }
                 else
                 {
@@ -102,5 +107,97 @@ namespace Exchange_App
 
             baglanti.Close();
         }
+
+        public void kullaniciBilgiBul()
+        {
+            idBul();
+            arpaBul();
+            bugdayBul();
+            pamukBul();
+            bakiyeBul();
+        }
+        private void idBul()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select kullaniciID from Kullanicilar where kullaniciAdi=@p1", baglanti);
+            komut.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
+            id = komut.ExecuteScalar().ToString();
+            baglanti.Close();
+            kullaniciAdi = txtKullaniciAdi.Text;
+        }
+
+        private void arpaBul()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select KO.ogeMiktar from Kullanicilar K inner join  KullaniciOgeleri Ko on K.kullaniciID=Ko.kullaniciID where K.kullaniciAdi=@p1 and Ko.ogeID=1", baglanti);
+            komut.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
+            if(komut.ExecuteScalar()== null)
+            {
+                Arpa = "0";
+            }
+            else
+            {
+                Arpa = komut.ExecuteScalar().ToString();
+            }
+            baglanti.Close();
+
+        }
+        private void bugdayBul()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select KO.ogeMiktar from Kullanicilar K inner join  KullaniciOgeleri Ko on K.kullaniciID=Ko.kullaniciID where K.kullaniciAdi=@p1 and Ko.ogeID=2", baglanti);
+            komut.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
+            if (komut.ExecuteScalar() == null)
+            {
+                Bugday = "0";
+            }
+            else
+            {
+                Bugday = komut.ExecuteScalar().ToString();
+            }
+            baglanti.Close();
+        }
+        private void pamukBul()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select KO.ogeMiktar from Kullanicilar K inner join  KullaniciOgeleri Ko on K.kullaniciID=Ko.kullaniciID where K.kullaniciAdi=@p1 and Ko.ogeID=3", baglanti);
+            komut.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
+            if (komut.ExecuteScalar() == null)
+            {
+                Pamuk = "0";
+            }
+            else
+            {
+                Pamuk = komut.ExecuteScalar().ToString();
+            }
+            baglanti.Close();
+        }
+        private void bakiyeBul()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select KO.ogeMiktar from Kullanicilar K inner join  KullaniciOgeleri Ko on K.kullaniciID=Ko.kullaniciID where K.kullaniciAdi=@p1 and Ko.ogeID=4", baglanti);
+            komut.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
+            if (komut.ExecuteScalar() == null)
+            {
+                Bakiye = "0";
+            }
+            else
+            {
+                Bakiye = komut.ExecuteScalar().ToString();
+            }
+            baglanti.Close();
+        }
+
+
+        /*private void datatableOlustur()
+        {
+            idBul();
+            baglanti.Open();
+            SqlDataAdapter da = new SqlDataAdapter("select k.kullaniciID, k.kullaniciAdi,O.ogeAdi,KO.ogeMiktar from Kullanicilar K inner join KullaniciOgeleri KO on K.kullaniciID=KO.kullaniciID inner join Ogeler O on O.ogeID = KO.ogeID where K.kullaniciID=@p1", baglanti);
+            da.SelectCommand.Parameters.AddWithValue("@p1", id);
+            da.Fill(kullaniciBilgileri);
+            dataGridView1.DataSource = kullaniciBilgileri;
+            baglanti.Close();
+        }*/
     }
 }

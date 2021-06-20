@@ -40,6 +40,8 @@ namespace Exchange_App
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblid = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -188,6 +190,8 @@ namespace Exchange_App
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lblid);
+            this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
@@ -203,6 +207,26 @@ namespace Exchange_App
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(872, 101);
             this.panel3.TabIndex = 2;
+            // 
+            // lblid
+            // 
+            this.lblid.AutoSize = true;
+            this.lblid.Font = new System.Drawing.Font("Century Gothic", 8.059701F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblid.Location = new System.Drawing.Point(251, 11);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(14, 20);
+            this.lblid.TabIndex = 2;
+            this.lblid.Text = "-";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.059701F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(216, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "ID:";
             // 
             // label5
             // 
@@ -228,7 +252,7 @@ namespace Exchange_App
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(184, 67);
+            this.label3.Location = new System.Drawing.Point(427, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 21);
             this.label3.TabIndex = 0;
@@ -238,7 +262,7 @@ namespace Exchange_App
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(173, 39);
+            this.label2.Location = new System.Drawing.Point(178, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 21);
             this.label2.TabIndex = 0;
@@ -268,7 +292,7 @@ namespace Exchange_App
             // 
             this.lblArpa.AutoSize = true;
             this.lblArpa.Font = new System.Drawing.Font("Century Gothic", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblArpa.Location = new System.Drawing.Point(247, 67);
+            this.lblArpa.Location = new System.Drawing.Point(490, 11);
             this.lblArpa.Name = "lblArpa";
             this.lblArpa.Size = new System.Drawing.Size(16, 21);
             this.lblArpa.TabIndex = 0;
@@ -278,7 +302,7 @@ namespace Exchange_App
             // 
             this.lblBakiye.AutoSize = true;
             this.lblBakiye.Font = new System.Drawing.Font("Century Gothic", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBakiye.Location = new System.Drawing.Point(247, 39);
+            this.lblBakiye.Location = new System.Drawing.Point(252, 67);
             this.lblBakiye.Name = "lblBakiye";
             this.lblBakiye.Size = new System.Drawing.Size(16, 21);
             this.lblBakiye.TabIndex = 0;
@@ -288,7 +312,7 @@ namespace Exchange_App
             // 
             this.lblKullaniciAdi.AutoSize = true;
             this.lblKullaniciAdi.Font = new System.Drawing.Font("Century Gothic", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(247, 11);
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(252, 39);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
             this.lblKullaniciAdi.Size = new System.Drawing.Size(16, 21);
             this.lblKullaniciAdi.TabIndex = 0;
@@ -298,7 +322,7 @@ namespace Exchange_App
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(128, 11);
+            this.label1.Location = new System.Drawing.Point(133, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 21);
             this.label1.TabIndex = 0;
@@ -374,5 +398,7 @@ namespace Exchange_App
         private UserControlVarlikEkle userControlVarlikEkle1;
         private UserControlAlimSatim userControlAlimSatim1;
         private UserControlRapor userControlRapor1;
+        private System.Windows.Forms.Label lblid;
+        private System.Windows.Forms.Label label6;
     }
 }
