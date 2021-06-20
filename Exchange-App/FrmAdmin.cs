@@ -15,8 +15,8 @@ namespace Exchange_App
     {
         int ID;
         int varlikID;
-        int eklenecekMiktar;
-        int mevcutMiktar;
+        double eklenecekMiktar;
+        double mevcutMiktar;
 
         public FrmAdmin()
         {
@@ -60,7 +60,7 @@ namespace Exchange_App
             SqlCommand komutVarlikGetir = new SqlCommand("select ogeMiktar from KullaniciOgeleri where kullaniciID=@p1 and ogeID=@p2", baglanti);
             komutVarlikGetir.Parameters.AddWithValue("@p1",ID);
             komutVarlikGetir.Parameters.AddWithValue("@p2",varlikID);
-            mevcutMiktar = Convert.ToInt16(komutVarlikGetir.ExecuteScalar());
+            mevcutMiktar = Convert.ToDouble(komutVarlikGetir.ExecuteScalar());
             baglanti.Close();
         }
 
@@ -75,7 +75,7 @@ namespace Exchange_App
         {
             baglanti.Open();
             SqlCommand komutGuncelle = new SqlCommand("Update KullaniciOgeleri set  ogeMiktar=@p1 Where kullaniciID=@p2 and ogeID=@p3", baglanti);
-            komutGuncelle.Parameters.AddWithValue("@p1", mevcutMiktar);
+            komutGuncelle.Parameters.AddWithValue("@p1", mevcutMiktar.ToString());
             komutGuncelle.Parameters.AddWithValue("@p2", ID);
             komutGuncelle.Parameters.AddWithValue("@p3", varlikID);
             komutGuncelle.ExecuteNonQuery();
@@ -100,7 +100,7 @@ namespace Exchange_App
             int satir = datagridview1.SelectedCells[0].RowIndex;
             ID = Convert.ToInt16(datagridview1.Rows[satir].Cells[1].Value);
             varlikID = Convert.ToInt16(datagridview1.Rows[satir].Cells[2].Value);
-            eklenecekMiktar = Convert.ToInt16(datagridview1.Rows[satir].Cells[3].Value);
+            eklenecekMiktar = Convert.ToDouble(datagridview1.Rows[satir].Cells[3].Value);
         }
     }
 }

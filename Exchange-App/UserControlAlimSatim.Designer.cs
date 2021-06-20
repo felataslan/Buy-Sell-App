@@ -79,10 +79,15 @@ namespace Exchange_App
             this.cmbUrun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbUrun.Font = new System.Drawing.Font("Century Gothic", 8.059701F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbUrun.FormattingEnabled = true;
+            this.cmbUrun.Items.AddRange(new object[] {
+            "ARPA",
+            "BUĞDAY",
+            "PAMUK"});
             this.cmbUrun.Location = new System.Drawing.Point(293, 127);
             this.cmbUrun.Name = "cmbUrun";
             this.cmbUrun.Size = new System.Drawing.Size(254, 28);
             this.cmbUrun.TabIndex = 25;
+            this.cmbUrun.SelectedIndexChanged += new System.EventHandler(this.cmbUrun_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -110,9 +115,9 @@ namespace Exchange_App
             this.label3.Location = new System.Drawing.Point(289, 177);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 20);
+            this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 28;
-            this.label3.Text = "MİKTAR";
+            this.label3.Text = "MİKTAR(KG)";
             // 
             // btnAl
             // 
@@ -127,6 +132,7 @@ namespace Exchange_App
             this.btnAl.TabIndex = 31;
             this.btnAl.Text = "AL";
             this.btnAl.UseVisualStyleBackColor = false;
+            this.btnAl.Click += new System.EventHandler(this.btnAl_Click);
             // 
             // btnSat
             // 

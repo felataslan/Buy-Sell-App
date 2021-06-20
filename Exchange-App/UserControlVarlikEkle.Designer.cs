@@ -32,7 +32,7 @@ namespace Exchange_App
             this.label1 = new System.Windows.Forms.Label();
             this.cmbVarlik = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMiktar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,6 +56,14 @@ namespace Exchange_App
             this.cmbVarlik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbVarlik.Font = new System.Drawing.Font("Century Gothic", 8.059701F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbVarlik.FormattingEnabled = true;
+            this.cmbVarlik.Items.AddRange(new object[] {
+            "ARPA",
+            "BUĞDAY",
+            "PAMUK",
+            "TL",
+            "USD",
+            "EURO",
+            "POUND"});
             this.cmbVarlik.Location = new System.Drawing.Point(291, 140);
             this.cmbVarlik.Name = "cmbVarlik";
             this.cmbVarlik.Size = new System.Drawing.Size(286, 28);
@@ -72,15 +80,15 @@ namespace Exchange_App
             this.label2.TabIndex = 22;
             this.label2.Text = "VARLIK SEÇİMİ";
             // 
-            // textBox1
+            // txtMiktar
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(291, 227);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 21);
-            this.textBox1.TabIndex = 23;
+            this.txtMiktar.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtMiktar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMiktar.Font = new System.Drawing.Font("Century Gothic", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMiktar.Location = new System.Drawing.Point(291, 227);
+            this.txtMiktar.Name = "txtMiktar";
+            this.txtMiktar.Size = new System.Drawing.Size(286, 21);
+            this.txtMiktar.TabIndex = 23;
             // 
             // panel1
             // 
@@ -133,7 +141,7 @@ namespace Exchange_App
             this.Controls.Add(this.btnVarlikEkle);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMiktar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbVarlik);
@@ -150,7 +158,7 @@ namespace Exchange_App
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbVarlik;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMiktar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;

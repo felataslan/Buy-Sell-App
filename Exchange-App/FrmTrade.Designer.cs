@@ -55,6 +55,7 @@ namespace Exchange_App
             this.userControlAlimSatim1 = new Exchange_App.UserControlAlimSatim();
             this.userControlVarlikEkle1 = new Exchange_App.UserControlVarlikEkle();
             this.userControlRapor1 = new Exchange_App.UserControlRapor();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -167,6 +168,7 @@ namespace Exchange_App
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(254, 0);
@@ -180,7 +182,7 @@ namespace Exchange_App
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 13.97015F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(836, 0);
+            this.btnClose.Location = new System.Drawing.Point(839, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(33, 36);
             this.btnClose.TabIndex = 2;
@@ -232,7 +234,7 @@ namespace Exchange_App
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(427, 67);
+            this.label5.Location = new System.Drawing.Point(434, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 21);
             this.label5.TabIndex = 0;
@@ -252,7 +254,7 @@ namespace Exchange_App
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(427, 11);
+            this.label3.Location = new System.Drawing.Point(448, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 21);
             this.label3.TabIndex = 0;
@@ -292,7 +294,7 @@ namespace Exchange_App
             // 
             this.lblArpa.AutoSize = true;
             this.lblArpa.Font = new System.Drawing.Font("Century Gothic", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblArpa.Location = new System.Drawing.Point(490, 11);
+            this.lblArpa.Location = new System.Drawing.Point(511, 12);
             this.lblArpa.Name = "lblArpa";
             this.lblArpa.Size = new System.Drawing.Size(16, 21);
             this.lblArpa.TabIndex = 0;
@@ -349,6 +351,20 @@ namespace Exchange_App
             this.userControlRapor1.Size = new System.Drawing.Size(872, 535);
             this.userControlRapor1.TabIndex = 5;
             // 
+            // btnBack
+            // 
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 13.97015F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnBack.Location = new System.Drawing.Point(805, 4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(33, 32);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "<";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // FrmTrade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -400,5 +416,6 @@ namespace Exchange_App
         private UserControlRapor userControlRapor1;
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnBack;
     }
 }

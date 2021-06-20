@@ -60,5 +60,12 @@ namespace Exchange_App
             //düzenlenecek
             lblKullaniciAdi.Text = "deneme";
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            FrmLogin frmlogin = new FrmLogin();
+            frmlogin.Show();
+            this.Close();
+        }
     }
 }
