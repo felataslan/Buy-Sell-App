@@ -43,21 +43,21 @@ namespace Exchange_App
                     alinacakMiktar = 0;
                 }
                 else if(alinacakMiktar <= saticiStok)
-                {
-                    
-                    alisverisTutar += alinacakMiktar * satisFiyat;
+                {           
+                    alisverisTutar = alinacakMiktar * satisFiyat;
                     aliciBakiye = (Convert.ToDouble(aliciBakiye) - alisverisTutar).ToString();
                     AliciUrunMiktar = (Convert.ToDouble(AliciUrunMiktar) + Convert.ToDouble(alinacakMiktar)).ToString();
-                    saticiBakiye = (Convert.ToInt32(saticiBakiye) + alisverisTutar).ToString();
-                    saticiUrunMiktar = (Convert.ToDouble(saticiUrunMiktar) - Convert.ToDouble(alinacakMiktar)).ToString();
-                    alinacakMiktar = 0;
+                    saticiBakiye = (Convert.ToDouble(saticiBakiye) + alisverisTutar).ToString();
+                    saticiUrunMiktar = (Convert.ToDouble(saticiUrunMiktar) - Convert.ToDouble(alinacakMiktar)).ToString();  
                     bilgiGuncelle(FrmLogin.id,AliciUrunMiktar,aliciBakiye);
                     bilgiGuncelle(saticiId,saticiUrunMiktar,saticiBakiye);
                     listele();
+                    raporEkle(alinacakMiktar);
+                    alinacakMiktar = 0;
                 }
                 else if( alinacakMiktar > saticiStok)
                 {
-                    alisverisTutar += saticiStok * satisFiyat;
+                    alisverisTutar = saticiStok * satisFiyat;
                     aliciBakiye = (Convert.ToDouble(aliciBakiye) - alisverisTutar).ToString();
                     AliciUrunMiktar = (Convert.ToDouble(AliciUrunMiktar) + Convert.ToDouble(saticiStok)).ToString();
                     saticiBakiye = (Convert.ToDouble(saticiBakiye) + alisverisTutar).ToString();
@@ -66,10 +66,22 @@ namespace Exchange_App
                     bilgiGuncelle(FrmLogin.id, AliciUrunMiktar, aliciBakiye);
                     bilgiGuncelle(saticiId, saticiUrunMiktar, saticiBakiye);
                     listele();
+                    raporEkle(saticiStok);
                 }
             }
         }
 
+        private void raporEkle(int miktar)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("insert into Rapor (kullaniciID,ogeID,miktar,tarih) values(@p1,@p2,@p3,@p4)", baglanti);
+            komut.Parameters.AddWithValue("@p1",FrmLogin.id);
+            komut.Parameters.AddWithValue("@p2",ogeID);
+            komut.Parameters.AddWithValue("@p3",miktar);
+            komut.Parameters.AddWithValue("@p4",DateTime.Now);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+        }
         private void bilgiGuncelle(string id,string urunMiktar,string para)
         {
             baglanti.Open();
